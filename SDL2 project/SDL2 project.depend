@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1667570373 source:/media/lihuel/Lihuel11E/SDL2 project/main.cpp
+	<SDL2/SDL.h>
+	<SDL2/SDL_image.h>
+	<iostream>
+
+1667644042 source:/media/lihuel/Lihuel11E/SDL2 project/src/game.cpp
+	"game.h"
+	<SDL2/SDL.h>
+
+1667643211 /media/lihuel/Lihuel11E/SDL2 project/include/game.h
+	<SDL2/SDL.h>
+	<iostream>
+
+1667644020 source:/media/lihuel/Lihuel11E/SDL2 project/src/main.cpp
+	<SDL2/SDL.h>
+	"game.h"
+
