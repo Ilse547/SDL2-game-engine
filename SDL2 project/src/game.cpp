@@ -1,8 +1,10 @@
 #include "game.h"
 #include <SDL2/SDL.h>
+#include "texturemanager.h"
+#include "gameobject.h"
 
-SDL_Texture* PlayerTex;
-SDL_Rect srcR, destR;
+GameObject* player;
+
 
 Game::Game()
 {
@@ -18,6 +20,7 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 {
 
     int flags = 0;
+
     if(Fullscreen)
     {
         flags = SDL_WINDOW_FULLSCREEN;
@@ -26,13 +29,10 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
     if (SDL_Init(SDL_INIT_EVERYTHING) == 0)
     {
         std::cout << "SDL managed to init" << std::endl;
-        window = SDL_CreateWindow(title, xpos, ypos, width, height, flags);
-        if(window)
-        {
-            std::cout << "window created" << std::endl;
-        }
 
+        window = SDL_CreateWindow(title, xpos, ypos, width, height, flags);
         renderer = SDL_CreateRenderer(window, -1, 0);
+
         if(renderer)
         {
             SDL_SetRenderDrawColor(renderer, 0, 255, 0, 0);
@@ -40,18 +40,15 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
         }
         isRunning = true;
     }
-
-    else{isRunning = false;}
-
-    SDL_Surface* tmpSurface = IMG_Load("res/gfx/Player.png");
-    PlayerTex = SDL_CreateTextureFromSurface(renderer, tmpSurface);
-    SDL_FreeSurface(tmpSurface);
+    player = new GameObject("res/gfx/Player.png", renderer, 0, 0);
 }
 
 void Game::HandleEvents()
 {
     SDL_Event event;
+
     SDL_PollEvent(&event);
+
     switch (event.type)
     {
         case SDL_QUIT:
@@ -66,17 +63,16 @@ void Game::Update()
 {
     cnt++;
     std::cout << cnt << std::endl;
+    player->Update();
 
-    destR.h = 32;
-    destR.w = 32;
 }
 
 void Game::Render()
 {
     SDL_RenderClear(renderer);
-    //add stuff to render
 
-    SDL_RenderCopy(renderer, PlayerTex, NULL, &destR);
+    player->Render();
+
     SDL_RenderPresent(renderer);
 
 }

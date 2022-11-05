@@ -40,10 +40,14 @@
 			<Add option="-lSDL2_image" />
 		</Linker>
 		<Unit filename="include/game.h" />
+		<Unit filename="include/gameobject.h" />
+		<Unit filename="include/texturemanager.h" />
 		<Unit filename="res/gfx/Grass_Tile.png" />
 		<Unit filename="res/gfx/Player.png" />
 		<Unit filename="src/game.cpp" />
+		<Unit filename="src/gameobject.cpp" />
 		<Unit filename="src/main.cpp" />
+		<Unit filename="src/texturemanager.cpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
