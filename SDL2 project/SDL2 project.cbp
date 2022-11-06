@@ -41,12 +41,18 @@
 		</Linker>
 		<Unit filename="include/game.h" />
 		<Unit filename="include/gameobject.h" />
+		<Unit filename="include/map.h" />
 		<Unit filename="include/texturemanager.h" />
+		<Unit filename="res/gfx/Dirt.png" />
+		<Unit filename="res/gfx/Enemy.png" />
+		<Unit filename="res/gfx/Grass.png" />
 		<Unit filename="res/gfx/Grass_Tile.png" />
 		<Unit filename="res/gfx/Player.png" />
+		<Unit filename="res/gfx/Water.png" />
 		<Unit filename="src/game.cpp" />
 		<Unit filename="src/gameobject.cpp" />
 		<Unit filename="src/main.cpp" />
+		<Unit filename="src/map.cpp" />
 		<Unit filename="src/texturemanager.cpp" />
 		<Extensions />
 	</Project>
