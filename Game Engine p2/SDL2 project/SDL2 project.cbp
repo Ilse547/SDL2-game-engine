@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="SDL2 project" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/SDL2 project" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="./" />
+					<Add directory="include" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/SDL2 project" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="./" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Linker>
+			<Add option="-lSDL2" />
+			<Add option="-lSDL2_image" />
+		</Linker>
+		<Unit filename="include/components.h" />
+		<Unit filename="include/ecs.h" />
+		<Unit filename="include/game.h" />
+		<Unit filename="include/gameobject.h" />
+		<Unit filename="include/map.h" />
+		<Unit filename="include/texturemanager.h" />
+		<Unit filename="res/gfx/Air.png" />
+		<Unit filename="res/gfx/CloudDL.png" />
+		<Unit filename="res/gfx/CloudDR.png" />
+		<Unit filename="res/gfx/CloudRU.png" />
+		<Unit filename="res/gfx/Clouds.png" />
+		<Unit filename="res/gfx/CloudsRL.png" />
+		<Unit filename="res/gfx/Dirt.png" />
+		<Unit filename="res/gfx/Enemy.png" />
+		<Unit filename="res/gfx/Grass.png" />
+		<Unit filename="res/gfx/Grass_Tile.png" />
+		<Unit filename="res/gfx/Player.png" />
+		<Unit filename="res/gfx/Water.png" />
+		<Unit filename="src/components.cpp" />
+		<Unit filename="src/ecs.cpp" />
+		<Unit filename="src/game.cpp" />
+		<Unit filename="src/gameobject.cpp" />
+		<Unit filename="src/main.cpp" />
+		<Unit filename="src/map.cpp" />
+		<Unit filename="src/texturemanager.cpp" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
